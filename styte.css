@@ -1,0 +1,157 @@
+:root {
+    --color-navy-navbar: #1c1c5ecc;
+    --color-navy: #1c1c5e;
+    --color-red: #ff032e;
+    --color-darkgrey: #323232;
+    --color-grey: #878a9f;
+    --color-lightgrey: #878a8a;
+    --color-light: #fafafa;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --font-extralight: 300;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+
+    --w-7xl: 80rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 50%;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Header */
+
+section.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+section.header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+section.header p {
+    font-size: 1.5rem;
+    font-weight: var(--font-light);
+}
+
+/* Form */
+
+section.form {
+    margin-bottom: 3rem;
+}
+
+section.form div.form-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+section.form div.form-input label,
+section.form div.form-input input {
+    flex: 1;
+}
+
+section.form div.form-input label {
+    text-align: start;
+    font-weight: var(--font-medium);
+}
+
+section.form div.form-input input,
+section.signature input.signature-mark {
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px dotted var(--color-black);
+}
+
+section.form p.comp-note {
+    text-align: start;
+    margin-top: 2rem;
+    font-style: italic;
+    font-weight: var(--font-light);
+    color: var(--color-darkgrey);
+}
+
+/* Signature */
+
+section.signature {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.signature div.signature-1,
+section.signature div.signature-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+section.signature p.signature-name {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+section.signature div.signature-2 p.signature-date {
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        padding: 2rem;
+    }
+    main {
+        width: 100%;
+    }
+    section.header h1 {
+        font-size: 2rem;
+    }
+    section.header p {
+        font-size: 1.25rem;
+        font-weight: var(--font-light);
+    }    
+    section.form div.form-input {
+        flex-direction: column;
+    }
+    section.form div.form-input label {
+        text-align: start;
+        margin-right: auto;
+    }
+    section.form div.form-input input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section.signature {
+        display: inline-block;
+    }
+    section.signature div.signature-1 {
+        margin-bottom: 5rem;
+    }
+}
